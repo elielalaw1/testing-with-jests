@@ -1,0 +1,14 @@
+{
+  "name": "testing-with-jests",
+  "version": "1.0.0",
+  "description": "detta är test komplettering. komplicerat faktiskt. hej hej hej",
+  "main": "src/index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest tests"
+  },
+  "author": "eli",
+  "license": "MIT"
+}
