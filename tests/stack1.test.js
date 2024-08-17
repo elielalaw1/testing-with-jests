@@ -1,21 +1,23 @@
-import * as stack from './stack.js';
+const stack = require('../src/stack.js');
 
 beforeEach(() => {
-    // Återställ stacken till tom innan varje test
-    stack.stack = [];
+    // Rensa stacken innan varje test
+    while (stack.peek() !== undefined) {
+        stack.pop();
+    }
 });
 
 test('Initial stack should be empty', () => {
-    expect(stack.peek()).toBeUndefined(); // Stacken bör vara tom
+    expect(stack.peek()).toBeUndefined();
 });
 
-test('Push should add item to stack', () => {
-    stack.push("Item");
-    expect(stack.peek()).toBe("Item"); // Översta elementet bör vara "Item"
+test('Push button adds item', () => {
+    stack.push('TestItem');
+    expect(stack.peek()).toBe('TestItem');
 });
 
-test('Pop should remove item from stack', () => {
-    stack.push("Item");
-    stack.pop();
-    expect(stack.peek()).toBeUndefined(); // Stacken bör vara tom efter pop
+test('Pop button removes item', () => {
+    stack.push('ItemToPop');
+    expect(stack.pop()).toBe('ItemToPop');
+    expect(stack.peek()).toBeUndefined();
 });
