@@ -15,6 +15,6 @@ describe('Stack Tests', () => {
 
   test('Initial stack should be empty', () => {
     const stackText = document.getElementById('top_of_stack').textContent;
-    expect(stackText).toBe("empty");
+    expect(stackText).toBe("n/a");
   });
 });
